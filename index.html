@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mini OS</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="boot-screen">
+      <button id="start-system">Start System</button>
+    </div>
+    <div class="desktop">
+      <div class="desktop-icons">
+        <div class="icon-box app">
+          <img
+            class="pc-icon desktop-icon"
+            src="https://ms.codes/cdn/shop/articles/this-pc-computer-display-windows-11-icon.png?v=1709255180"
+          />
+          <p>This PC</p>
+        </div>
+
+        <div class="icon-box app">
+          <img
+            id="notepad-icon"
+            class="desktop-icon"
+            src="https://play-lh.googleusercontent.com/jD8waDJPN1yv4OdcB6_ILw9M4kyNPdtgBYtoTiPrYhxA1l4FLSKXXe4kAcDCjmtZmQ4"
+          />
+          <p>Notepad</p>
+        </div>
+        <div class="icon-box app">
+          <img
+            id="camera-icon"
+            class="desktop-icon camera-icon"
+            src="https://cdn-icons-png.flaticon.com/512/6979/6979603.png"
+          />
+
+          <p class="camera-icon">Camera</p>
+        </div>
+        <div class="icon-box app">
+          <img
+            id="chrome-icon"
+            class="desktop-icon chrome-icon"
+            src="./chrome.png"
+          />
+
+          <p class="chrome-p">Chrome</p>
+        </div>
+      </div>
+
+      <div class="window chrome-window">
+        <div class="topbar">
+          <div class="window-title">Chrome</div>
+
+          <div class="window-controls">
+            <i class="fa fa-window-minimize minimize-btn"></i>
+            <i class="fa fa-window-restore restore-btn"></i>
+            <i class="fa fa-close close-btn"></i>
+          </div>
+        </div>
+
+        <div class="chrome-controls">
+          <input type="text" id="url-input" placeholder="Enter website URL" />
+
+          <button id="go-btn">Go</button>
+        </div>
+
+        <div class="window-body">
+          <iframe id="browser-frame"></iframe>
+        </div>
+      </div>
+
+      <div class="window camera-window">
+        <div class="topbar">
+          <div class="window-title">Camera</div>
+
+          <div class="window-controls">
+            <i class="fa fa-window-minimize minimize-btn"></i>
+            <i class="fa fa-window-restore restore-btn"></i>
+            <i class="fa fa-close close-btn"></i>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <video
+            id="webcam"
+            autoplay
+            playsinline
+            width="100%"
+            height="100%"
+          ></video>
+        </div>
+      </div>
+      <div class="window notepad-window">
+        <div class="topbar">
+          <div class="window-title">Notepad</div>
+
+          <div class="window-controls">
+            <i class="fa fa-window-minimize minimize-btn"></i>
+            <i class="fa fa-window-restore restore-btn"></i>
+            <i class="fa fa-close close-btn"></i>
+          </div>
+        </div>
+
+        <div class="window-body">
+          <div class="notepad-nav">
+            <div class="nav-left">
+              <h3>File</h3>
+              <h3>Edit</h3>
+              <h3>View</h3>
+            </div>
+
+            <img
+              class="save-icon"
+              src="https://cdn-icons-png.flaticon.com/512/561/561135.png"
+            />
+          </div>
+
+          <div class="notepad-content">
+            <h4>Hello How are you doing</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="window pc-window">
+        <div class="topbar">
+          <div class="window-title">This PC</div>
+
+          <div class="window-controls">
+            <i class="fa fa-window-minimize minimize-btn"></i>
+            <i class="fa fa-window-restore restore-btn"></i>
+            <i class="fa fa-close close-btn"></i>
+          </div>
+        </div>
+
+        <div class="content">
+          <figure>
+            <img
+              class="content-icon"
+              src="https://static.vecteezy.com/system/resources/thumbnails/054/653/743/small/yellow-computer-file-folder-icon-with-document-paper-free-png.png"
+            />
+            <figcaption>Documents</figcaption>
+          </figure>
+
+          <figure>
+            <img
+              class="content-icon"
+              src="https://freepngimg.com/save/22106-folder/512x512"
+            />
+            <figcaption>Folder</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <div class="taskbar">
+      <div class="taskbar-left">
+        <div id="mybutton">
+          <i class="fa-brands fa-windows"></i>
+        </div>
+      </div>
+
+      <div class="taskbar-center">
+        <div class="search-container">
+          <i class="fa fa-search"></i>
+          <input id="search-input" type="text" placeholder="Search" />
+        </div>
+        <div class="taskbar-apps"></div>
+      </div>
+
+      <div class="taskbar-right">
+        <p id="clock"></p>
+      </div>
+    </div>
+
+    <div class="context-menu">
+      <div class="menu-item refresh">Refresh</div>
+      <!-- <div class="menu-item open">open</div> -->
+
+      <div class="menu-item"><div id="setting">power off</div></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

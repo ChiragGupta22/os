@@ -1,0 +1,469 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+/* DESKTOP */
+
+.desktop {
+  width: 100%;
+  height: calc(100vh - 50px);
+
+  background-image: url("https://4kwallpapers.com/images/wallpapers/windows-11-dark-mode-blue-stock-official-3840x2160-5630.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+/* DESKTOP ICONS */
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  padding: 20px;
+}
+
+.icon-box {
+  width: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.icon-box p {
+  color: white;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.desktop-icon {
+  width: 65px;
+}
+
+/* WINDOWS */
+
+.window {
+  width: 750px;
+  height: 500px;
+
+  background: rgba(25, 25, 25, 0.8);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  position: absolute;
+
+  top: 50px;
+  left: 140px;
+
+  display: none;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* TOPBAR */
+
+.topbar {
+  height: 42px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 15px;
+
+  color: white;
+}
+
+.window-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.window-controls {
+  display: flex;
+  gap: 18px;
+}
+
+.window-controls i {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.window-controls i:hover {
+  transform: scale(1.1);
+}
+
+/* NOTEPAD */
+
+.window-body {
+  height: calc(100% - 42px);
+  background: #f1f1f1;
+}
+
+.notepad-nav {
+  height: 50px;
+
+  background: rgb(255, 0, 200);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+}
+
+.nav-left {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-left h3 {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.save-icon {
+  width: 22px;
+  cursor: pointer;
+}
+
+.notepad-content {
+  padding: 20px;
+}
+
+/* PC WINDOW */
+
+.content {
+  display: flex;
+  gap: 50px;
+
+  padding: 40px;
+}
+
+figure {
+  text-align: center;
+}
+
+figcaption {
+  color: white;
+  margin-top: 10px;
+}
+
+.content-icon {
+  width: 120px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.content-icon:hover {
+  transform: scale(1.05);
+}
+
+.fullscreen {
+  width: 100% !important;
+  height: calc(100vh - 50px) !important;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  border-radius: 0;
+}
+
+.taskbar {
+  width: 100%;
+  height: 50px;
+
+  background: rgba(20, 20, 20, 0.9);
+
+  backdrop-filter: blur(10px);
+
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+}
+
+.taskbar-left i {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.taskbar-center {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  width: 220px;
+  height: 34px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 12px;
+}
+
+.search-container i {
+  color: white;
+  margin-right: 10px;
+}
+
+.search-container input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+  font-size: 14px;
+}
+
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.taskbar-right p {
+  color: white;
+  font-size: 14px;
+}
+
+.camera-window .window-body {
+  background: black;
+  height: calc(100% - 42px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#webcam {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.desktop,
+.taskbar {
+  display: none;
+}
+
+.boot-screen {
+  width: 100%;
+  height: 100vh;
+
+  background: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#start-system {
+  padding: 15px 40px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 20px;
+  cursor: pointer;
+
+  background: white;
+  color: black;
+}
+
+.taskbar-apps {
+  margin-left: 20px;
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.taskbar-item {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+
+  padding: 6px 14px;
+  border-radius: 6px;
+
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chrome-icon {
+  border-radius: 10px;
+}
+
+.chrome-p {
+  color: white;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+#browser-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.chrome-controls {
+  height: 50px;
+
+  display: flex;
+  gap: 10px;
+
+  padding: 10px;
+
+  background: #222;
+}
+
+/* //snbz */
+
+.context-menu {
+  width: 180px;
+
+  background: rgba(30, 30, 30, 0.95);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 10px;
+
+  position: absolute;
+
+  display: none;
+
+  overflow: hidden;
+
+  z-index: 9999;
+}
+.refresh {
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.refresh-icon:hover {
+  transform: rotate(360deg);
+}
+.menu-item {
+  padding: 12px 15px;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  /* prevent desktop overflow */
+  body {
+    overflow: hidden;
+  }
+
+  /* WINDOW FIX */
+  @media (max-width: 768px) {
+    .window {
+      width: 95vw;
+      height: 75vh;
+
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      border-radius: 10px;
+    }
+  }
+
+  .chrome-p {
+    color: white;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* icons become horizontal */
+  .desktop-icons {
+    flex-direction: column;
+  }
+
+  .icon-box {
+    width: 70px;
+  }
+
+  .desktop-icon {
+    width: 45px;
+  }
+
+  .icon-box p {
+    font-size: 12px;
+  }
+
+  /* taskbar fix */
+  .taskbar {
+    padding: 0 10px;
+  }
+
+  .taskbar-center {
+    display: none; /* hide search on mobile */
+  }
+
+  .taskbar-right p {
+    font-size: 12px;
+  }
+
+  /* content layout fix */
+  .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .content-icon {
+    width: 80px;
+  }
+
+  /* topbar text smaller */
+  .window-title {
+    font-size: 13px;
+  }
+
+  .window-controls i {
+    font-size: 14px;
+  }
+}
